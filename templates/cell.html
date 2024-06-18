@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Cell Type: {{ cell.label }}</h1>
+<iframe src="https://www.wikidata.org/wiki/{{ cell.qid }}" width="100%" height="300px"></iframe>
+
+{% if cell.sitelink %}
+<h2>Wikipedia Information</h2>
+<iframe src="{{ cell.sitelink }}" width="100%" height="600px"></iframe>
+{% else %}
+<p>No Wikipedia page available for this cell type.</p>
+{% endif %}
+
+<a href="/" class="btn btn-primary mt-3">Back to Assemblages</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Assemblages</h1>
+{% for header1, subheaders in headers.items() %}
+<h2>{{ header1 }}</h2>
+{% for header2, assemblages in subheaders.items() %}
+<h3>{{ header2 }}</h3>
+<ul class="list-group">
+    {% for assemblage in assemblages %}
+    <li class="list-group-item">
+        <a href="{{ url_for('assemblage', name=assemblage) }}">{{ assemblage }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}
+{% endfor %}
+{% endblock %}
