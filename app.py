@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 import requests
+from flask_caching import Cache
 
 app = Flask(__name__)
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 # Function to get data from Wikidata query
+@cache.cached(timeout=7200, key_prefix='wikidata_query')  # Cache for 2 hours
 def get_wikidata():
     query = """
     SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink
@@ -19,7 +22,11 @@ def get_wikidata():
     }
     """
     url = 'https://query.wikidata.org/sparql'
-    r = requests.get(url, params={'format': 'json', 'query': query})
+    headers = {
+        'User-Agent': 'MyWikidataApp/1.0 (https://example.com; myemail@example.com)'
+    }
+    r = requests.get(url, params={'format': 'json', 'query': query}, headers=headers)
+    r.raise_for_status()
     data = r.json()
     
     results = {}
@@ -58,31 +65,49 @@ def index():
         if header2 not in headers[header1]:
             headers[header1][header2] = []
         headers[header1][header2].append(name_safe)
+    
+    # Sort the assemblages alphabetically
+    for header1 in headers:
+        for header2 in headers[header1]:
+            headers[header1][header2].sort()
+
     return render_template('index.html', headers=headers, data=data)
 
 @app.route('/assemblage/<name>')
 def assemblage(name):
-    name = name.replace("+", "/")
+    original_name = name.replace("+", "/")
     data = get_wikidata()
-    assemblage_data = data.get(name, {})
+    assemblage_data = data.get(original_name, {})
     cells = assemblage_data.get('cells', [])
     assemblage_qid = assemblage_data.get('qid', '')
-    header1, headers2 = extract_headers(name)
-    return render_template('assemblage.html', name=name, cells=cells, qid=assemblage_qid, header1=header1, headers2=[headers2])
+    header1, headers2 = extract_headers(original_name)
+    return render_template('assemblage.html', name=original_name, cells=cells, qid=assemblage_qid, header1=header1, headers2=[headers2])
+
+def extract_assemblage_short_name(name):
+    start = name.find("Hall") + 5
+    end = name.find("(") - 1
+    return name[start:end].strip()
 
 @app.route('/cell/<qid>', methods=['GET'])
 def cell(qid):
     data = get_wikidata()
     cell_info = None
+    assemblage_name = ""
+    assemblage_safe_name = ""
+    assemblage_cells = []
     for assemblage, info in data.items():
         for cell in info['cells']:
             if cell['qid'] == qid:
                 cell_info = cell
+                assemblage_name = assemblage
+                assemblage_safe_name = assemblage.replace("/", "+")
+                assemblage_cells = [c for c in info['cells'] if c['qid'] != qid]
                 break
         if cell_info:
             break
 
-    return render_template('cell.html', cell=cell_info)
+    short_name = extract_assemblage_short_name(assemblage_name)
+    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name)
 
 @app.route('/about')
 def about():

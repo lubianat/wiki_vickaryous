@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Vickaryous & Hall Cell Classification</a>
+        <a class="navbar-brand" href="/">Vickaryous & Hall Cell Catalog on Wikidata</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -27,7 +28,12 @@
     </div>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <span class="text-muted">Done by Tiago Lubiana in 2024. <a href="/about">About</a></span>
+            <span class="text-muted">
+                Made in <a href="https://www.wikidata.org/wiki/Q155" target="_blank">🇧🇷</a> by Tiago Lubiana in 2024.
+                Content from Wikidata is under <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+                    target="_blank">CC0</a>. <a href="/about">About</a> | <a
+                    href="https://github.com/lubianat/wiki_vickaryous" target="_blank">GitHub</a>
+            </span>
         </div>
     </footer>
 </body>

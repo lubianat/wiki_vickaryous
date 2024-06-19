@@ -1,10 +1,90 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>About</h1>
+
 <p>This website was created by Tiago Lubiana in 2024. It is designed to provide an easy-to-navigate interface for
-    exploring the Vickaryous & Hall cell classification system using data from Wikidata and Wikipedia.</p>
+    exploring the Vickaryous & Hall cell classification system using data from <a href="https://www.wikidata.org/"
+        target="_blank">Wikidata</a> and <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a>.</p>
+
+<p>In 2006, Matthew Vickaryous and Brian Hall published a comprehensive list of over 400 cell types found in humans
+    based
+    on previous lists and the literature in general (available at <a href="https://doi.org/10.1017/s1464793106007068"
+        target="_blank">doi.org/10.1017/s1464793106007068</a>).
+    The article was published in the journal <i>Biological Reviews</i> of the Cambridge Philosophical Society, and it
+    presents a philosophical and historical review, with a clear catalog.</p>
+
+<p>I could not find a more recent catalog focusing on <i>human</i> cell types, especially one meant for humans to read.
+    The <a href="https://cell-ontology.github.io/" target="_blank">Cell Ontology</a> is probably the most used catalog
+    of cell types technically,
+    as it is used for data annotation (e.g., by <a href="https://cellxgene.cziscience.com/"
+        target="_blank">CELLxGENE</a>). However, it is a multispecies ontology without an obvious human subset AND it
+    does not make the explicit assumptions that Vickaryous & Hall made.</p>
+
+<p>These explicit assumptions include:</p>
+<blockquote style="border-left: 5px solid #ccc; padding-left: 10px; color: #555;">
+    <p>"The catalogue was initially assembled assuming that all cell types recognised in the literature are natural
+        entities (i.e., exist independent of investigation and investigator; Rodieck & Brening, 1983). In addition, this
+        rationale draws attention to even poorly known and weakly supported cell types, with the expectation that future
+        investigations will provide more definitive evidence supporting (or refuting) such claims (see also Rodieck &
+        Brening, 1983). The composite data set was then modified as follows: (1) Any cell types identified as stem or
+        immature members of a particular cell type lineage were removed. (2) Redundant cells (cells present on more than
+        one list) were removed so that each cell type was represented only once. (3) In situations where the single
+        inclusive cell type of one (group of) author(s) represented several exclusive cell types of another (group of)
+        author(s), the default was to accept the largest number of subdivisions as the actual number of cell types,
+        except in situations that contradicted statement 1 (above). For example, Lentz (1971) listed four different cell
+        types corresponding to stages in the maturation series of an epithelial keratinocyte. Since these ‘ cell types ’
+        are deemed to represent immature members of the epithelial keratinocyte lineage, only one cell type (epithelial
+        keratinocyte) is retained. Similarly, erythrocytes are a single cell type."</p>
+
+    <p>". Beginning with the cell as a component of one of the four basic tissue types (epithelial, nervous, muscular,
+        and connective tissue; the ‘ special purpose ’ criterion of Mayr & Bock, 2002), subsequent decisions were based
+        on histological/cytological characterisations commonly used to describe cells. These criteria included the
+        relative position of a cell to other anatomical structures (e.g., covering or lining), function (e.g., support
+        or blood/ immune), and biochemical product (e.g., mucous or sebaceous). Inherently, such decisions are fraught
+        with subjectivity. In an attempt to remain conservative, in this analysis these decisions were made in
+        consultation with traditional human histological texts (e.g., Rhodin, 1974; Bloom & Fawcett, 1975), as well as
+        the different classes of cell types presented by Lentz (1971), Alberts et al. (1989), and Campbell et al.
+        (1989)."</p>
+</blockquote>
+
+<p>There is great merit in putting assumptions in the clear, and that is one of the reasons why their catalog is
+    extremely useful.
+    While I may have different opinions on what to count as cell types, the quality of their work allows me to build
+    upon it in all clarity.
+    I believe their classification should be studied in detail by anyone intending to classify human cell diversity.</p>
+
+<p>For this website, I have curated links from the cell types listed by Vickaryous and Hall to their mapped entries on
+    <a href="https://www.wikidata.org/" target="_blank">Wikidata</a>.
+    I've been curating cell types on Wikidata as part of my PhD. I mapped previously existing terms on Wikidata and
+    created new terms where needed.
+    Some Wikidata terms are linked to Wikipedia, which allows me to pull them directly into the page for each cell type.
+    Please, feel free to contribute more information about the cell types on Wikidata and Wikipedia!
+</p>
+
 <p>The site leverages the power of linked data and semantic web technologies to dynamically present information about
     various cell types and their hierarchical classifications.</p>
-<p>For more information, you can visit my <a href="https://github.com/tiagolubiana">GitHub profile</a>.</p>
+
+<p>This project was built with help from a conversation with ChatGPT. For more details, visit <a
+        href="https://chatgpt.com/c/c8850431-1f17-4246-9059-c8457c9e9ae2" target="_blank">this link</a>.</p>
+
+<p>T.L. is supported by a grant from the São Paulo State Foundation, FAPESP #19/26284-1 (Building a biological knowledge
+    graph via Wikidata with a focus on the Human Cell Atlas). For more information, visit the <a
+        href="https://bv.fapesp.br/en/bolsas/193825/building-a-biological-knowledge-graph-via-wikidata-with-a-focus-on-the-human-cell-atlas/"
+        target="_blank">grant page</a>.</p>
+
+<p><strong>Citation for the original catalog:</strong><br>
+    Vickaryous MK, Hall BK. Human cell type diversity, evolution, development, and classification with special reference
+    to cells derived from the neural crest. Biol Rev Camb Philos Soc. 2006 Aug;81(3):425-55. doi:
+    10.1017/S1464793106007068. Epub 2006 Jun 22. PMID: 16790079.</p>
+
+<p><strong>Cite this website:</strong><br>
+    Tiago Lubiana. Vickaryous & Hall Cell Classification System on Wikidata. 2024. Available at: <a
+        href="https://github.com/lubianat/wiki_vickaryous"
+        target="_blank">https://github.com/lubianat/wiki_vickaryous</a>.</p>
+
+<p><strong>Disclaimer:</strong><br>
+    The original authors, Matthew Vickaryous and Brian Hall, cannot be held accountable for any issues or errors in the
+    curation or the website. They should receive all of the good credit, but no blame.</p>
+
 <a href="/" class="btn btn-primary mt-3">Back to Home</a>
 {% endblock %}

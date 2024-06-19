@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Assemblages</h1>
+<h1>The Vickaryous & Hall Human Cell Catalog</h1>
+
+<p> In 2006, Vickaryous and Hall published a comprehensive list of over 400 human cell types.
+    By 2024, this is still the most up-to-date explicit catalog of cell types.
+    This website is a semantic-web version of the catalog, leveraging the infrastructure of <a
+        href="https://wikidata.org">Wikidata</a>
+    to enable navigation on the catalog, complemented with encyclopedic texts from Wikipedia.</p>
+
+<p> The cell types collected by Vickaryous and Hall were divided in categories named assemblages, shown below. </p>
+<p>Have fun!</p>
+
+
 {% for header1, subheaders in headers.items() %}
 <h2>{{ header1 }}</h2>
 {% for header2, assemblages in subheaders.items() %}
