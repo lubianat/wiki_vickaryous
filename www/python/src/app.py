@@ -1,19 +1,26 @@
 from flask import Flask, render_template, request
 import requests
 from flask_caching import Cache
+from oaklib import get_adapter
 
 app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
+# Initialize the OAK adapter
+adapter = get_adapter("sqlite:obo:cl")
+
 # Function to get data from Wikidata query
-@cache.cached(timeout=7200, key_prefix='wikidata_query')  # Cache for 2 hours
+#@cache.cached(timeout=7200, key_prefix='wikidata_query')  # Cache for 2 hours
 def get_wikidata():
     query = """
-    SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink
+    SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink ?cellOntologyID
     WHERE
     {
       wd:Q126088667 wdt:P527 ?assemblage . 
       ?assemblage wdt:P527 ?cell . 
+      OPTIONAL {
+          ?cell wdt:P7963 ?cellOntologyID .
+      }
       OPTIONAL {
           ?sitelink schema:about ?cell;
           schema:isPartOf <https://en.wikipedia.org/> . 
@@ -36,13 +43,36 @@ def get_wikidata():
         cell = {
             'label': item['cellLabel']['value'],
             'qid': item['cell']['value'].split('/')[-1],
-            'sitelink': item.get('sitelink', {}).get('value', '')
+            'sitelink': item.get('sitelink', {}).get('value', ''),
+            'cellOntologyID': item.get('cellOntologyID', {}).get('value', '')
         }
         if assemblage not in results:
             results[assemblage] = {'qid': assemblage_qid, 'cells': []}
         results[assemblage]['cells'].append(cell)
     
     return results
+
+# Function to fetch Cell Ontology information
+def fetch_cell_ontology_info(cell_ontology_id):
+    if not cell_ontology_id:
+        return None
+    cell_ontology_id = cell_ontology_id.replace("_", ":")
+    info = {
+        'id': cell_ontology_id,
+        'name': adapter.label(cell_ontology_id),
+        'definition': adapter.definition(cell_ontology_id),
+        'relationships': []
+    }
+    
+    for rel, parent in adapter.outgoing_relationships(cell_ontology_id):
+        info['relationships'].append({
+            'relationship': rel,
+            'relationship_label': adapter.label(rel),
+            'parent': parent,
+            'parent_label': adapter.label(parent)
+        })
+    
+    return info
 
 # Function to extract headers from assemblage name
 def extract_headers(name):
@@ -95,6 +125,8 @@ def cell(qid):
     assemblage_name = ""
     assemblage_safe_name = ""
     assemblage_cells = []
+    cell_ontology_info = None
+
     for assemblage, info in data.items():
         for cell in info['cells']:
             if cell['qid'] == qid:
@@ -102,12 +134,14 @@ def cell(qid):
                 assemblage_name = assemblage
                 assemblage_safe_name = assemblage.replace("/", "+")
                 assemblage_cells = [c for c in info['cells'] if c['qid'] != qid]
+                if 'cellOntologyID' in cell:
+                    cell_ontology_info = fetch_cell_ontology_info(cell['cellOntologyID'])
                 break
         if cell_info:
             break
 
     short_name = extract_assemblage_short_name(assemblage_name)
-    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name)
+    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name, cell_ontology_info=cell_ontology_info)
 
 @app.route('/about')
 def about():

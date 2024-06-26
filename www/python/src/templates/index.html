@@ -31,7 +31,8 @@
     <ul class="content-list">
         {% for assemblage in assemblages %}
         <li>
-            <a href="{{ url_for('assemblage', name=assemblage) }}">{{ assemblage }}</a>
+            {% set assemblage_display = assemblage.replace('Vickaryous & Hall assemblage', 'assemblage') %}
+            <a href="{{ url_for('assemblage', name=assemblage) }}">{{ assemblage_display }}</a>
         </li>
         {% endfor %}
     </ul>
