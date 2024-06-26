@@ -27,6 +27,9 @@
             <li>{{ rel.relationship_label }} ({{ rel.relationship }}) -> {{ rel.parent_label }} ({{ rel.parent }})</li>
             {% endfor %}
         </ul>
+        {% else %}
+        <h2>Cell Ontology</h2>
+        <p>No Cell Ontology ID available.</p>
         {% endif %}
     </div>
     <div class="col-md-4">
