@@ -1,16 +1,13 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 import requests
 from flask_caching import Cache
-from oaklib import get_adapter
 
 app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
-# Initialize the OAK adapter
-adapter = get_adapter("sqlite:obo:cl")
-
 # Function to get data from Wikidata query
 @cache.cached(timeout=7200, key_prefix='wikidata_query')  # Cache for 2 hours
+# Updated SPARQL query to include Cell Ontology ID
 def get_wikidata():
     query = """
     SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink ?cellOntologyID
@@ -51,30 +48,6 @@ def get_wikidata():
         results[assemblage]['cells'].append(cell)
     
     return results
-
-# Function to fetch Cell Ontology information
-def fetch_cell_ontology_info(cell_ontology_id):
-    if not cell_ontology_id:
-        return None
-    
-    cell_ontology_id = cell_ontology_id.replace("_",":")
-    
-    info = {
-        'id': cell_ontology_id,
-        'name': adapter.label(cell_ontology_id),
-        'definition': adapter.definition(cell_ontology_id),
-        'relationships': []
-    }
-    
-    for rel, parent in adapter.outgoing_relationships(cell_ontology_id):
-        info['relationships'].append({
-            'relationship': rel,
-            'relationship_label': adapter.label(rel),
-            'parent': parent,
-            'parent_label': adapter.label(parent)
-        })
-    
-    return info
 
 # Function to extract headers from assemblage name
 def extract_headers(name):
@@ -127,6 +100,7 @@ def cell(qid):
     assemblage_name = ""
     assemblage_safe_name = ""
     assemblage_cells = []
+    cell_ontology_id = None
 
     for assemblage, info in data.items():
         for cell in info['cells']:
@@ -135,20 +109,13 @@ def cell(qid):
                 assemblage_name = assemblage
                 assemblage_safe_name = assemblage.replace("/", "+")
                 assemblage_cells = [c for c in info['cells'] if c['qid'] != qid]
+                cell_ontology_id = cell.get('cellOntologyID')
                 break
         if cell_info:
             break
 
     short_name = extract_assemblage_short_name(assemblage_name)
-    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name)
-
-@app.route('/cell_ontology/<cell_ontology_id>', methods=['GET'])
-def cell_ontology(cell_ontology_id):
-    info = fetch_cell_ontology_info(cell_ontology_id)
-    if info:
-        return jsonify(info)
-    else:
-        return jsonify({'error': 'No Cell Ontology ID available'}), 404
+    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name, cell_ontology_id=cell_ontology_id)
 
 @app.route('/about')
 def about():
