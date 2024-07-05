@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V&H Cell Catalog</title>
-    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 70px;
-            /* Adjust to your navbar height */
-            background-color: #F5E8C7;
-            /* Light papyrus color */
-            font-family: 'Lato', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V&H Cell Catalog</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px;
+      /* Adjust to your navbar height */
+      background-color: #F5E8C7;
+      /* Light papyrus color */
+      font-family: 'Lato', sans-serif;
+    }
 
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.9);
-            /* Slight transparency */
-        }
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.9);
+      /* Slight transparency */
+    }
 
-        .navbar-brand img {
-            height: 30px;
-            margin-right: 10px;
-        }
+    .navbar-brand img {
+      height: 30px;
+      margin-right: 10px;
+    }
 
-        .btn-primary {
-            background-color: #40E0D0;
-            /* Turquoise color */
-            border-color: #40E0D0;
-            color: #000;
-            /* Black text */
-        }
+    .btn-primary {
+      background-color: #40E0D0;
+      /* Turquoise color */
+      border-color: #40E0D0;
+      color: #000;
+      /* Black text */
+    }
 
-        .btn-primary:hover {
-            background-color: #30C0B0;
-            border-color: #30C0B0;
-            color: #000;
-            /* Black text */
-        }
+    .btn-primary:hover {
+      background-color: #30C0B0;
+      border-color: #30C0B0;
+      color: #000;
+      /* Black text */
+    }
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            padding-top: 1rem;
-            border-top: 2px solid #ccc;
-            /* Separator */
-        }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      padding-top: 1rem;
+      border-top: 2px solid #ccc;
+      /* Separator */
+    }
 
-        h3 {
-            font-size: 1.25rem;
-            font-weight: normal;
-            color: #666;
-        }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #666;
+    }
 
-        .content-list a {
-            color: #003366;
-            /* Dark blue color for links */
-            text-decoration: none;
-        }
+    .content-list a {
+      color: #003366;
+      /* Dark blue color for links */
+      text-decoration: none;
+    }
 
-        .content-list a:hover {
-            text-decoration: underline;
-        }
+    .content-list a:hover {
+      text-decoration: underline;
+    }
 
-        .content-list li {
-            list-style-type: none;
-            padding: 5px 0;
-        }
-    </style>
-    <script type="application/ld+json">
+    .content-list li {
+      list-style-type: none;
+      padding: 5px 0;
+    }
+  </style>
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -86,47 +86,47 @@
         "query-input": "required name=search_term_string"
       }
     }
-    </script>
+  </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="/">
-            <img src="{{ url_for('static', filename='favicon.svg') }}" alt="Logo">
-            Vickaryous & Hall Cell Catalog on Wikidata
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="/">
+      <img src="{{ url_for('static', filename='favicon.svg') }}" alt="Logo">
+      Vickaryous & Hall Cell Catalog on Wikidata
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
     </div>
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container text-center">
-            <span class="text-muted">
-                Made in <a href="https://www.wikidata.org/wiki/Q155" target="_blank">🇧🇷</a> by Tiago Lubiana in 2024.
-                Content from Wikidata is under <a href="https://creativecommons.org/publicdomain/zero/1.0/"
-                    target="_blank">CC0</a>. <a href="/about">About</a> | <a
-                    href="https://github.com/lubianat/wiki_vickaryous" target="_blank">GitHub</a>
-            </span>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </nav>
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+      <span class="text-muted">
+        Made in <a href="https://www.wikidata.org/wiki/Q155" target="_blank">🇧🇷</a> in 2024.
+        Content from Wikidata is under <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+          target="_blank">CC0</a>. <a href="/about">About</a> | <a href="https://github.com/lubianat/wiki_vickaryous"
+          target="_blank">GitHub</a>
+      </span>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

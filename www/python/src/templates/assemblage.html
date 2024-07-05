@@ -3,15 +3,14 @@
 <h1>{{ name }}</h1>
 
 <p>This page lists all the cells that are part of the {{ name }} assemblage. Below you can find the cells classified
-    under this assemblage.</p>
+  under this assemblage.</p>
 
-<h2>Cells in {{ name }}</h2>
 <ul class="content-list">
-    {% for cell in cells %}
-    <li>
-        <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
-    </li>
-    {% endfor %}
+  {% for cell in cells %}
+  <li>
+    <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
+  </li>
+  {% endfor %}
 </ul>
 
 <a href="/" class="btn btn-primary mt-3">Back to Home</a>
