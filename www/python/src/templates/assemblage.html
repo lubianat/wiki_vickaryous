@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ name }}</h1>
+{% set assemblage_display = name.replace('Vickaryous & Hall assemblage', 'assemblage') %}
+<h1>{{ assemblage_display }}</h1>
 
 <p>This page lists all the cells that are part of the {{ name }} assemblage. Below you can find the cells classified
   under this assemblage.</p>

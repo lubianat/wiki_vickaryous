@@ -7,13 +7,17 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 # Function to get data from Wikidata query
 @cache.cached(timeout=7200, key_prefix='wikidata_query')  # Cache for 2 hours
+# Updated SPARQL query to include Cell Ontology ID
 def get_wikidata():
     query = """
-    SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink
+    SELECT ?assemblage ?assemblageLabel ?cell ?cellLabel ?sitelink ?cellOntologyID
     WHERE
     {
       wd:Q126088667 wdt:P527 ?assemblage . 
       ?assemblage wdt:P527 ?cell . 
+      OPTIONAL {
+          ?cell wdt:P7963 ?cellOntologyID .
+      }
       OPTIONAL {
           ?sitelink schema:about ?cell;
           schema:isPartOf <https://en.wikipedia.org/> . 
@@ -36,7 +40,8 @@ def get_wikidata():
         cell = {
             'label': item['cellLabel']['value'],
             'qid': item['cell']['value'].split('/')[-1],
-            'sitelink': item.get('sitelink', {}).get('value', '')
+            'sitelink': item.get('sitelink', {}).get('value', ''),
+            'cellOntologyID': item.get('cellOntologyID', {}).get('value', '')
         }
         if assemblage not in results:
             results[assemblage] = {'qid': assemblage_qid, 'cells': []}
@@ -95,6 +100,8 @@ def cell(qid):
     assemblage_name = ""
     assemblage_safe_name = ""
     assemblage_cells = []
+    cell_ontology_id = None
+
     for assemblage, info in data.items():
         for cell in info['cells']:
             if cell['qid'] == qid:
@@ -102,12 +109,13 @@ def cell(qid):
                 assemblage_name = assemblage
                 assemblage_safe_name = assemblage.replace("/", "+")
                 assemblage_cells = [c for c in info['cells'] if c['qid'] != qid]
+                cell_ontology_id = cell.get('cellOntologyID')
                 break
         if cell_info:
             break
 
     short_name = extract_assemblage_short_name(assemblage_name)
-    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name)
+    return render_template('cell.html', cell=cell_info, assemblage_name=short_name, assemblage_cells=assemblage_cells, assemblage_safe_name=assemblage_safe_name, cell_ontology_id=cell_ontology_id)
 
 @app.route('/about')
 def about():
