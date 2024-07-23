@@ -1,45 +1,91 @@
 {% extends "base.html" %}
 {% block content %}
 {% set assemblage_display = assemblage_name.replace('Vickaryous & Hall assemblage', 'Assemblage') %}
-<div class="row">
-  <div class="col-md-8">
-    <h1>{{ cell.label }}</h1>
-    {% if cell.sitelink %}
-    <h2>Wikipedia <a href="{{ cell.sitelink }}" target="_blank"><i class="fa fa-external-link"
-          aria-hidden="true"></i></a></h2>
-    <iframe src="{{ cell.sitelink }}" width="100%" height="700px"></iframe>
-    {% else %}
-    <p>No Wikipedia page available for this cell type. <a
-        href="https://en.wikipedia.org/w/index.php?title={{ cell.label }}&action=edit" target="_blank"
-        class="btn btn-primary">Create Wikipedia Page</a></p>
-    {% endif %}
-    <h2>Wikidata <a href="https://www.wikidata.org/wiki/{{ cell.qid }}" target="_blank"><i class="fa fa-external-link"
-          aria-hidden="true"></i></a></h2>
-    <iframe src="https://www.wikidata.org/wiki/{{ cell.qid }}" width="100%" height="300px"></iframe>
-    {% if cell_ontology_id %}
-    <h2>Cell Ontology <a
-        href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F{{ cell_ontology_id.replace(':', '_') }}"
-        target="_blank" class="fa fa-external-link" aria-hidden="true"></a></h2>
-    <iframe
-      src="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F{{ cell_ontology_id.replace(':', '_') }}"
-      width="100%" height="700px"></iframe>
-    {% else %}
-    <h2>Cell Ontology </h2>
-    <p>No Cell Ontology ID available.</p>
-    {% endif %}
+<div class="container-fluid" style="margin-left:100px">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>{{ cell.label }}</h1>
+
+      <div class="card mt-4" style="background-color: #F5E8C7;">
+        <div class="card-header">
+          <h2>Wikipedia <a href="{{ cell.sitelink or 'https://en.wikipedia.org/wiki/' ~ cell.label }}"
+              target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></h2>
+        </div>
+        <div class="card-body">
+          {% if cell.sitelink %}
+          <iframe src="{{ cell.sitelink }}" width="100%" height="700px"></iframe>
+          {% else %}
+          <p>No Wikipedia page available for this cell type. <a
+              href="https://en.wikipedia.org/w/index.php?title={{ cell.label }}&action=edit" target="_blank"
+              class="btn btn-primary">Create Wikipedia Page</a></p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="card mt-4" style="background-color: #F5E8C7;">
+        <div class="card-header">
+          <h2>Wikidata <a href="https://www.wikidata.org/wiki/{{ cell.qid }}" target="_blank"><i
+                class="fa fa-external-link" aria-hidden="true"></i></a></h2>
+        </div>
+        <div class="card-body">
+          <iframe src="https://www.wikidata.org/wiki/{{ cell.qid }}" width="100%" height="300px"></iframe>
+        </div>
+      </div>
+
+      {% if cell_ontology_id %}
+      <div class="card mt-4" style="background-color: #F5E8C7;">
+        <div class="card-header">
+          <h2>Cell Ontology <a
+              href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F{{ cell_ontology_id.replace(':', '_') }}"
+              target="_blank" class="fa fa-external-link" aria-hidden="true"></a></h2>
+        </div>
+        <div class="card-body">
+          <iframe
+            src="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F{{ cell_ontology_id.replace(':', '_') }}"
+            width="100%" height="700px"></iframe>
+        </div>
+      </div>
+      {% else %}
+      <div class="card mt-4" style="background-color: #F5E8C7;">
+        <div class="card-header">
+          <h2>Cell Ontology</h2>
+        </div>
+        <div class="card-body">
+          <p>No Cell Ontology ID available.</p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-4">
+      <h2>Cells in {{ assemblage_display }}</h2>
+      <ul class="content-list">
+        {% for cell in assemblage_cells %}
+        <li>
+          <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="{{ url_for('assemblage', name=assemblage_safe_name) }}" class="btn btn-primary mt-3">Back to
+        Assemblage</a>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card mt-4" style="background-color: #F5E8C7;">
+        <div class="card-header">
+          <h2>Cell Type Tree Visualization</h2>
+        </div>
+        <div class="card-body" style="max-height: 800px;">
+          <!-- Container for the D3 tree visualization -->
+          <div id="tree-container" style="width: 800px; height: 800px;"></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-4">
-    <h2>cells in {{ assemblage_display }}</h2>
-    <ul class="content-list">
-      {% for cell in assemblage_cells %}
-      <li>
-        <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    <a href="{{ url_for('assemblage', name=assemblage_safe_name) }}" class="btn btn-primary mt-3">Back to
-      Assemblage</a>
-  </div>
+
+  <a href="/" class="btn btn-primary mt-3">Back to Home</a>
 </div>
-<a href="/" class="btn btn-primary mt-3">Back to Home</a>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="{{ url_for('static', filename='js/tree.js') }}"></script>
 {% endblock %}

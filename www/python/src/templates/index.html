@@ -1,55 +1,90 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>The Vickaryous & Hall Human Cell Type Catalog</h2>
+<div class="container">
+  <h2>The Vickaryous & Hall Human Cell Type Catalog</h2>
 
-<p>In 2006, Vickaryous and Hall published a comprehensive list of over 400 human cell types. By 2024, this is still the
-    most up-to-date explicit catalog of cell types. This website is a semantic-web version of the catalog, leveraging
+  <p>In 2006, Vickaryous and Hall published a comprehensive list of over 400 human cell types. By 2024, this is still
+    the most up-to-date explicit catalog of cell types. This website is a semantic-web version of the catalog,
+    leveraging
     the infrastructure of <a href="https://wikidata.org">Wikidata</a> to enable navigation on the catalog, complemented
     with encyclopedic texts from Wikipedia.</p>
 
-<p>The cell types collected by Vickaryous and Hall were divided in categories named assemblages, shown below.</p>
-<p>Have fun! Here are some example cell types:</p>
+  <p>The cell types collected by Vickaryous and Hall were divided into categories named assemblages, shown below.</p>
+  <p>Have fun! Here are some example cell types:</p>
 
-<ul>
-    <li><a href="./cell/Q827450">hepatocyte</a></li>
-    <li><a href="./cell/Q74560">spermatozoon</a></li>
-    <li><a href="./cell/Q465621">Schwann cell</a></li>
-</ul>
+  <ul>
+    <li><a href="./cell/Q827450">Hepatocyte</a></li>
+    <li><a href="./cell/Q74560">Spermatozoon</a></li>
+    <li><a href="./cell/Q465621">Schwann Cell</a></li>
+  </ul>
 
-<p><strong>Citation for the original catalog:</strong><br>
+  <p><strong>Citation for the original catalog:</strong><br>
     Vickaryous MK, Hall BK. Human cell type diversity, evolution, development, and classification with special reference
     to cells derived from the neural crest. Biol Rev Camb Philos Soc. 2006 Aug;81(3):425-55. doi:
     <a href="https://doi.org/10.1017/S1464793106007068" target="_blank">10.1017/S1464793106007068</a>. Epub 2006 Jun 22.
     PMID: 16790079.
-</p>
+  </p>
 
-{% for header1, subheaders in headers.items() %}
-<h2>{{ header1 }}</h2>
-<div class="collapsible-content">
-    {% for header2, assemblages in subheaders.items() %}
-    <h3>{{ header2 }}</h3>
-    <ul class="content-list">
-        {% for assemblage in assemblages %}
-        <li>
-            {% set assemblage_display = assemblage.replace('Vickaryous & Hall assemblage', 'assemblage') %}
-            <a href="{{ url_for('assemblage', name=assemblage) }}">{{ assemblage_display }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% endfor %}
+  <div class="card mt-4" style="background-color: #F5E8C7;">
+    <div class="card-header">
+      <h2>Cell Type Assemblages</h2>
+    </div>
+    <div class="card-body">
+      {% for header1, subheaders in headers.items() %}
+      <div class="collapsible">
+        <h2 class="collapsible-header">{{ header1 }} <button class="btn btn-link collapse-btn">Collapse/Expand</button>
+        </h2>
+        <div class="collapsible-content">
+          {% for header2, assemblages in subheaders.items() %}
+          <h3>{{ header2 }}</h3>
+          <ul class="content-list">
+            {% for assemblage in assemblages %}
+            <li>
+              {% set assemblage_display = assemblage.replace('Vickaryous & Hall assemblage', 'assemblage') %}
+              <a href="{{ url_for('assemblage', name=assemblage) }}">{{ assemblage_display }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- index.html -->
+  <div class="card mt-4" style="background-color: #F5E8C7;">
+    <div class="card-header">
+      <h2>Cell Type Tree Visualization</h2>
+    </div>
+    <div class="card-body" style="max-height: 800px;">
+      <!-- Container for the D3 tree visualization -->
+      <div id="tree-container" style="min-width: 800px; min-height: 800px;"></div>
+    </div>
+  </div>
+
+
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="{{ url_for('static', filename='js/tree.js') }}"></script>
 </div>
-{% endfor %}
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const headers = document.querySelectorAll("h2");
-        headers.forEach(header => {
-            header.addEventListener("click", function () {
-                const content = this.nextElementSibling;
-                content.style.display = content.style.display === "none" ? "block" : "none";
-            });
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize collapsible headers
+    const collapsibleHeaders = document.querySelectorAll(".collapsible-header");
+    collapsibleHeaders.forEach(header => {
+      header.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
     });
+  });
 </script>
 
 {% endblock %}

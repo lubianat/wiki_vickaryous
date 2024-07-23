@@ -73,6 +73,38 @@
       list-style-type: none;
       padding: 5px 0;
     }
+
+    <style>body {
+      background-color: #F5E8C7;
+    }
+
+    .card {
+      background-color: #F5E8C7;
+    }
+
+    .collapsible-content {
+      display: none;
+      overflow: hidden;
+    }
+
+    .collapsible-header {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .collapse-btn {
+      background: none;
+      border: none;
+      color: #003366;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .collapsible-header.active+.collapsible-content {
+      display: block;
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -110,7 +142,7 @@
       </ul>
     </div>
   </nav>
-  <div class="container">
+  <div>
     {% block content %}
     {% endblock %}
   </div>

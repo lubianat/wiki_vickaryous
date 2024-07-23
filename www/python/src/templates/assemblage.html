@@ -1,18 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
-{% set assemblage_display = name.replace('Vickaryous & Hall assemblage', 'assemblage') %}
-<h1>{{ assemblage_display }}</h1>
+<div class="container">
+  {% set assemblage_display = name.replace('Vickaryous & Hall assemblage', 'assemblage') %}
+  <h1>{{ assemblage_display }}</h1>
 
-<p>This page lists all the cells that are part of the {{ name }} assemblage. Below you can find the cells classified
-  under this assemblage.</p>
+  <p>This page lists all the cells that are part of the {{ name }} assemblage. Below you can find the cells classified
+    under this assemblage.</p>
 
-<ul class="content-list">
-  {% for cell in cells %}
-  <li>
-    <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
-  </li>
-  {% endfor %}
-</ul>
+  <ul class="content-list">
+    {% for cell in cells %}
+    <li>
+      <a href="{{ url_for('cell', qid=cell.qid) }}">{{ cell.label }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
-<a href="/" class="btn btn-primary mt-3">Back to Home</a>
+  <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+  <!-- index.html -->
+  <div class="card mt-4" style="background-color: #F5E8C7;">
+    <div class="card-header">
+      <h2>Cell Type Tree Visualization</h2>
+    </div>
+    <div class="card-body" style="max-height: 800px;">
+      <!-- Container for the D3 tree visualization -->
+      <div id="tree-container" style="min-width: 800px; min-height: 800px;"></div>
+    </div>
+  </div>
+
+
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="{{ url_for('static', filename='js/tree.js') }}"></script>
+</div>
 {% endblock %}
