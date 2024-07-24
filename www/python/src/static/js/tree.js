@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .call(d3.zoom().on("zoom", function(event) {
         let transform = event.transform;
         // Set fixed boundaries for panning
-        const minX = -width / 2;
-        const maxX = width / 2;
+        const minX = -width;
+        const maxX = width ;
         const minY = -height / 2;
         const maxY = height / 2;
         transform.x = Math.min(maxX, Math.max(minX, transform.x));
