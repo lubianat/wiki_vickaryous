@@ -77,39 +77,46 @@ document.addEventListener("DOMContentLoaded", function () {
     root.y0 = 0;
 
     const svg = d3.select("#tree-container").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .call(d3.zoom().on("zoom", function(event) {
-      svg.attr("transform", `translate(${event.transform.x}, ${event.transform.y})`);
-    }).scaleExtent([1, 1]))  // Prevent zooming by setting scaleExtent to [1, 1]
-    .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
-  
-  
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .call(d3.zoom().on("zoom", function(event) {
+        let transform = event.transform;
+        // Set fixed boundaries for panning
+        const minX = -width / 2;
+        const maxX = width / 2;
+        const minY = -height / 2;
+        const maxY = height / 2;
+        transform.x = Math.min(maxX, Math.max(minX, transform.x));
+        transform.y = Math.min(maxY, Math.max(minY, transform.y));
+        svg.attr("transform", `translate(${transform.x}, ${transform.y})`);
+      }).scaleExtent([1, 1]))  // Prevent zooming by setting scaleExtent to [1, 1]
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
     root.children.forEach(collapse); // Collapse all children of root initially
-
+  
     update(root);
-
+    
     function update(source) {
       const treeData = treeLayout(root);
       const nodes = treeData.descendants();
       const links = treeData.descendants().slice(1);
-
+    
       nodes.forEach(d => d.y = d.depth * 180);
-
+    
       const node = svg.selectAll('g.node')
         .data(nodes, d => d.id || (d.id = ++i));
-
+    
       const nodeEnter = node.enter().append('g')
         .attr('class', 'node')
         .attr('transform', d => `translate(${source.y0},${source.x0})`)
         .on('click', click);
-
+    
       nodeEnter.append('circle')
         .attr('class', 'node')
         .attr('r', 1e-6)
         .style("fill", d => d._children ? "lightsteelblue" : "#fff");
-
+    
       nodeEnter.append('text')
         .attr("dy", ".35em")
         .attr("x", d => d.children || d._children ? -13 : 13)
@@ -132,32 +139,32 @@ document.addEventListener("DOMContentLoaded", function () {
             d3.select(this).style("text-decoration", "none");
           }
         });
-
+    
       const nodeUpdate = nodeEnter.merge(node);
-
+    
       nodeUpdate.transition()
         .duration(200)
         .attr('transform', d => `translate(${d.y},${d.x})`);
-
+    
       nodeUpdate.select('circle.node')
         .attr('r', 10)
         .style("fill", d => d._children ? "lightsteelblue" : "#fff")
         .attr('cursor', 'pointer');
-
+    
       const nodeExit = node.exit().transition()
         .duration(200)
         .attr('transform', d => `translate(${source.y},${source.x})`)
         .remove();
-
+    
       nodeExit.select('circle')
         .attr('r', 1e-6);
-
+    
       nodeExit.select('text')
         .style('fill-opacity', 1e-6);
-
+    
       const link = svg.selectAll('path.link')
         .data(links, d => d.id);
-
+    
       const linkEnter = link.enter().insert('path', "g")
         .attr("class", "link")
         .attr('d', d => {
@@ -168,15 +175,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .style("stroke-width", 2)
         .style("fill", "lightblue")
         .style("opacity", 0.5);
-
+    
       const linkUpdate = linkEnter.merge(link);
-
+    
       linkUpdate.transition()
         .duration(200)
         .attr('d', d => diagonal(d, d.parent))
         .style("stroke", "lightblue")
         .style("opacity", 0.5);
-
+    
       const linkExit = link.exit().transition()
         .duration(200)
         .attr('d', d => {
@@ -184,19 +191,19 @@ document.addEventListener("DOMContentLoaded", function () {
           return diagonal(o, o);
         })
         .remove();
-
+    
       nodes.forEach(d => {
         d.x0 = d.x;
         d.y0 = d.y;
       });
-
+    
       function diagonal(s, d) {
         return `M ${s.y} ${s.x}
                 C ${(s.y + d.y) / 2} ${s.x},
                   ${(s.y + d.y) / 2} ${d.x},
                   ${d.y} ${d.x}`;
       }
-
+    
       function click(event, d) {
         if (d.children) {
           d._children = d.children;
@@ -208,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
         update(d);
       }
     }
-
+    
     function collapse(d) {
       if (d.children) {
         d._children = d.children;
@@ -217,4 +224,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+  
 });

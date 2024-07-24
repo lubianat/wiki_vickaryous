@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 {% set assemblage_display = assemblage_name.replace('Vickaryous & Hall assemblage', 'Assemblage') %}
-<div class="container-fluid" style="margin-left:100px">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-lg-8 col-md-12">
       <h1>{{ cell.label }}</h1>
 
       <div class="card mt-4" style="background-color: #F5E8C7;">
@@ -55,18 +55,18 @@
         </div>
       </div>
       {% endif %}
-      <div class="card mt-4" style="background-color: #F5E8C7;">
+      <div class="card mt-4" style="background-color: #F5E8C7; height:960px">
         <div class="card-header">
           <h2>Cell Type Tree Visualization</h2>
         </div>
-        <div class="card-body" style="max-height: 800px;">
+        <div class="card-body">
           <!-- Container for the D3 tree visualization -->
-          <div id="tree-container" style="width: 800px; height: 800px;"></div>
+          <div id="tree-container"></div>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-md-12">
       <h2>Cells in {{ assemblage_display }}</h2>
       <ul class="content-list">
         {% for cell in assemblage_cells %}
@@ -78,8 +78,6 @@
       <a href="{{ url_for('assemblage', name=assemblage_safe_name) }}" class="btn btn-primary mt-3">Back to
         Assemblage</a>
     </div>
-
-
   </div>
 
   <a href="/" class="btn btn-primary mt-3">Back to Home</a>
