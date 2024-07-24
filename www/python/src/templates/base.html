@@ -95,6 +95,12 @@
       /* Separator */
     }
 
+    @media (max-width: 767px) {
+      #tree-container {
+        display: none;
+      }
+    }
+
     .collapse-btn {
       background: none;
       border: none;
@@ -105,38 +111,6 @@
 
     .collapsible-header.active+.collapsible-content {
       display: block;
-    }
-
-    /* Add this to your existing <style> tag in base.html */
-    @media (max-width: 767px) {
-      .container-fluid {
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-
-      .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      .col-md-8,
-      .col-md-4,
-      .col-lg-8,
-      .col-lg-4 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-
-      .card {
-        margin-bottom: 10px;
-        /* Reduced further */
-      }
-
-      .card .card-body iframe {
-        height: 400px;
-        /* Adjust iframe height for smaller screens */
-      }
     }
   </style>
   <script type="application/ld+json">
