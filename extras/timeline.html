@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Classification Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .timeline {
+      list-style-type: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #C5C5C5;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .timeline-item {
+      margin: 20px 0;
+      padding-left: 30px;
+      position: relative;
+      width: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      transform: translateX(0);
+      text-align: right;
+      padding-left: 0;
+      padding-right: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      background: #C5C5C5;
+      border-radius: 50%;
+      left: -8px;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      left: auto;
+      right: -8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Timeline of Cell Classification Schemes</h1>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <strong>1839</strong><br>
+      Schwann proposed a five-group classification for tissue types: isolated/independent cells, independent cells in
+      combination, cells welded by intercellular substance, fibre cells, and cells with broken-down walls (Schwann,
+      1839; Hall, 1969).
+    </li>
+    <li class="timeline-item">
+      <strong>1989</strong><br>
+      Junqueira, Carneiro & Kelley proposed a four-group subdivision: epithelial, muscular, nervous, and connective
+      tissues (Junqueira et al., 1989).
+    </li>
+    <li class="timeline-item">
+      <strong>1970</strong><br>
+      Willmer classified progenitor cells based on morphology and behaviour in culture into four groups: epitheliocytes,
+      mechanocytes, amoebocytes, and nerve cells (Willmer, 1970).
+    </li>
+    <li class="timeline-item">
+      <strong>1997</strong><br>
+      Stevens & Lowe categorised cell types by function into eight groups: epithelial, support, contractile, nerve,
+      germ, blood, immune, and hormone-secreting cells (Stevens & Lowe, 1997).
+    </li>
+    <li class="timeline-item">
+      <strong>1989</strong><br>
+      Alberts et al. listed 210 human cell types in 20 categories, mostly related to function (Alberts et al., 1989).
+    </li>
+  </ul>
+  <h2>References</h2>
+  <ul>
+    <li>Alberts, B., Bray, D., Lewis, J., Raff, M., Roberts, K. & Watson, J. D. (1989). Molecular Biology of the Cell,
+      2nd Edn. Garland Publishing, Inc., New York.</li>
+    <li>Hall, T. S. (1969). History of General Physiology, Vol. 2. University of Chicago Press, Chicago.</li>
+    <li>Junqueira, L. C., Carneiro, J. & Kelley, R. O. (1989). Basic Histology, 6th Edn. Appleton & Lange, Norwalk,
+      Connecticut.</li>
+    <li>Schwann, T. (1839). Mikroskopische Untersuchungen über die Übereinstimmung in der Struktur und dem Wachstum der
+      Tiere und Pflanzen, Berlin.</li>
+    <li>Stevens, A. & Lowe, J. (1997). Human Histology, 2nd Edn. Mosby, Toronto.</li>
+    <li>Willmer, E. N. (1970). Cytology and Evolution, 2nd Edn. Academic Press, New York.</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+name 1,name 2,Wikidata QID 2,Cell Ontology ID 2,Wikipedia Link 2,level
+nervous tissue,neuron,,,,1
+neuron,CNS,,,,2
+CNS,other (assemblage EE),,Q126628870,,pre-terminal
+other (assemblage EE),CA3 pyramidal cell dendrite,Q21135407,,,terminal
+epithelium,somatic,,,,1
+somatic,gland,,,,2
+gland,endocrine,,,,3
+endocrine,non-pituitary,,,,4
+non-pituitary,steroid (assemblage K),,Q126628790,,pre-terminal
+steroid (assemblage K),follicle cell microvillus organization,Q22295626,,,terminal
+somatic,surface epithelium,,,,2
+surface epithelium,lining,,,,3
+lining,endolymphatic cells (assemblage S),,Q126628826,,pre-terminal
+endolymphatic cells (assemblage S),inner auditory hair cell,Q29642076,,,terminal
+endolymphatic cells (assemblage S),outer auditory hair cell,Q29642077,,,terminal
+muscle tissue,non-skeletal (assemblage HH),,Q126724170,,pre-terminal
+non-skeletal (assemblage HH),smooth muscle cell,Q66508979,CL_0000192,,terminal
+steroid (assemblage K),lutein cell,Q66509968,CL_0000175,,terminal
+nervous tissue,glia,,,,1
+glia,CNS,,,,2
+CNS,astrocytes (assemblage AA),,Q126628853,,pre-terminal
+astrocytes (assemblage AA),velate protoplasmic astrocyte,Q66544362,,,terminal
+astrocytes (assemblage AA),fibrous astrocyte,Q66544360,,,terminal
+CNS,oligodendrocytes (assemblage BB),,Q126628859,,pre-terminal
+oligodendrocytes (assemblage BB),perineuronal satellite oligodendrocyte,Q66544367,,,terminal
+lining,hollow viscera (assemblage P),,Q126628810,,pre-terminal
+hollow viscera (assemblage P),supporting cell of olfactory epithelium,Q66558578,CL_0000853,,terminal
+endolymphatic cells (assemblage S),type 1 vestibular sensory cell,Q66558636,CL_0002070,,terminal
+hollow viscera (assemblage P),type II taste bud cell,Q66558679,CL_0002286,,terminal
+non-pituitary,peptide (assemblage I),,Q126628782,,pre-terminal
+peptide (assemblage I),CCK-secreting enteroendocrine cell,Q66559374,CL_0002277,,terminal
+peptide (assemblage I),type K enteroendocrine cell,Q66559382,CL_0002278,,terminal
+peptide (assemblage I),type N enteroendocrine cell,Q66559383,CL_0002280,,terminal
+peptide (assemblage I),type L enteroendocrine cell,Q66559385,CL_0002279,,terminal
+peptide (assemblage I),type X enteroendocrine cell,Q66559729,CL_0002284,,terminal
+peptide (assemblage I),type P enteroendocrine cell,Q66559822,CL_0002500,,terminal
+peptide (assemblage I),type TG enteroendocrine cell,Q66559826,CL_0002282,,terminal
+peptide (assemblage I),type Mo enteroendocrine cell,Q66559824,CL_0002502,,terminal
+endolymphatic cells (assemblage S),microvillus columnar cell,Q66562851,,,terminal
+lining,serosal cell (assemblage N),,Q126628801,,pre-terminal
+serosal cell (assemblage N),mesothelial cell,Q66562849,CL_0000077,,terminal
+lining,ducts (assemblage O),,Q126628806,,pre-terminal
+ducts (assemblage O),transitional epithelial cell,Q66562854,CL_0000244,,terminal
+serosal cell (assemblage N),type A synoviocyte,Q66562864,CL_0002302,,terminal
+serosal cell (assemblage N),type B synoviocyte,Q66562865,CL_0002301,,terminal
+non-skeletal (assemblage HH),nodal myocyte,Q66562941,CL_0002072,,terminal
+CNS,special (assemblage DD),,Q126628865,,pre-terminal
+special (assemblage DD),rod bipolar cell,Q66563426,CL_0000751,,terminal
+hollow viscera (assemblage P),olfactory epithelial cell,Q66563539,CL_0002167,,terminal
+endolymphatic cells (assemblage S),type 2 vestibular sensory cell,Q66563574,CL_0002069,,terminal
+non-skeletal (assemblage HH),regular cardiac myocyte,Q66563622,CL_0002098,,terminal
+hollow viscera (assemblage P),brush cell,Q66563628,CL_0002204,,terminal
+lining,endothelial cell (assemblage Q),,Q126628814,,pre-terminal
+endothelial cell (assemblage Q),endothelial cell of lymphatic vessel,Q66564051,CL_0002138,,terminal
+steroid (assemblage K),type I cell of adrenal cortex,Q66567012,CL_0002099,,terminal
+non-pituitary,amino acid (assemblage H),,Q126628779,,pre-terminal
+amino acid (assemblage H),type ii cell of adrenal medulla,Q66567099,CL_0002082,,terminal
+amino acid (assemblage H),type I cell of adrenal medulla,Q66567097,CL_0002083,,terminal
+steroid (assemblage K),type II cell of adrenal cortex,Q66567434,CL_0002136,,terminal
+non-pituitary,protein (assemblage J),,Q126628787,,pre-terminal
+protein (assemblage J),epithelial cell of parathyroid gland,Q66568501,CL_0002260,,terminal
+surface epithelium,covering,,,,3
+covering,non-keratinizing (assemblage M),,Q126628797,,pre-terminal
+non-keratinizing (assemblage M),conjunctival epithelial cell,Q66568506,CL_1000432,,terminal
+hollow viscera (assemblage P),corneal epithelial cell,Q66568505,CL_0000575,,terminal
+steroid (assemblage K),follicular cell of ovary,Q66568541,CL_0002174,,terminal
+lining,CNS derivative (assemblage R),,Q126628819,,pre-terminal
+CNS derivative (assemblage R),non-pigmented ciliary epithelial cell,Q66568554,CL_0002304,,terminal
+CNS derivative (assemblage R),pigmented ciliary epithelial cell,Q66568553,CL_0002303,,terminal
+endothelial cell (assemblage Q),corneal endothelial cell,Q66568563,CL_0000132,,terminal
+CNS derivative (assemblage R),myoepithelial cell of dilator pupillae,Q66568567,CL_1000445,,terminal
+gland,exocrine,,,,3
+exocrine,sweat (assemblage D),,Q126628763,,pre-terminal
+sweat (assemblage D),dark cell of eccrine sweat gland,Q66568610,CL_0002142,,terminal
+sweat (assemblage D),clear cell of eccrine sweat gland,Q66568609,CL_0002146,,terminal
+exocrine,other (assemblage E),,Q126628766,,pre-terminal
+other (assemblage E),acinar cell of sebaceous gland,Q66568812,CL_0002140,,terminal
+ducts (assemblage O),epithelial cell of proximal tubule,Q66568828,CL_0002306,,terminal
+ducts (assemblage O),epithelial cell of distal tubule,Q66568836,CL_0002305,,terminal
+ducts (assemblage O),epithelial cell of collecting duct of renal tubule,Q66568837,CL_1000454,,terminal
+endolymphatic cells (assemblage S),internal pillar cell of cochlea,Q66572838,CL_0002163,,terminal
+endolymphatic cells (assemblage S),external pillar cell of cochlea,Q66572839,CL_0002164,,terminal
+CNS derivative (assemblage R),retinal pigment epithelial cell,Q66572893,CL_0002586,,terminal
+connective tissue,support,,,,1
+support,ECM secreting (assemblage U),,Q126628834,,pre-terminal
+ECM secreting (assemblage U),interdental cell of cochlea,Q66578491,CL_0002172,,terminal
+endolymphatic cells (assemblage S),inner phalangeal cell of cochlea,Q66578495,CL_0005015,,terminal
+connective tissue,blood/immune,,,,1
+blood/immune,monocyte (assemblage W),,Q126628842,,pre-terminal
+monocyte (assemblage W),splenic macrophage,Q66589798,CL_0000871,,terminal
+endocrine,pituitary,,,,4
+pituitary,basophilic (assemblage G),,Q126628774,,pre-terminal
+basophilic (assemblage G),thyrotroph,Q66589863,CL_0000476,,terminal
+exocrine,protein secreting (assemblage C),,Q126628680,,pre-terminal
+protein secreting (assemblage C),pancreatic acinar cell,Q66590269,CL_0000622,,terminal
+peptide (assemblage I),glucagon-secreting cell,Q66590548,CL_0000170,,terminal
+CNS derivative (assemblage R),type II cell of carotid body,Q66590665,CL_0002081,,terminal
+other (assemblage EE),double bouquet cell of cerebral cortex,Q66590933,CL_4023159,,terminal
+other (assemblage EE),fusiform cell,Q66592467,,,terminal
+peptide (assemblage I),interstitial cell of pineal gland,Q66592485,CL_0002220,,terminal
+other (assemblage E),glandular cell of prostate,Q66592656,,,terminal
+ducts (assemblage O),epithelial cell of prostate,Q66599479,CL_0002231,,terminal
+non-skeletal (assemblage HH),Purkinje fiber cell,Q101062559,,,terminal
+exocrine,mucous (assemblage B),,Q126088720,,pre-terminal
+mucous (assemblage B),salivary gland mucous cell,Q101062659,,,terminal
+hollow viscera (assemblage P),airway ciliated cell,Q101062671,,,terminal
+ducts (assemblage O),airway ciliated cell,Q101062671,,,terminal
+glia,PNS (assemblage Z),,Q126628850,,pre-terminal
+PNS (assemblage Z),enteric glia cell,Q101062673,,,terminal
+hollow viscera (assemblage P),intestinal epithelial cell,Q104695690,CL_0002563,,terminal
+ECM secreting (assemblage U),nucleus pulposus cell,Q105321381,CL_0002564,,terminal
+mucous (assemblage B),duodenum glandular cell,Q106413794,CL_1001589,,terminal
+ECM secreting (assemblage U),fibroblastic reticular cell,Q106472246,CL_0009101,,terminal
+blood/immune,lymphocytes (assemblage V),,Q126628837,,pre-terminal
+lymphocytes (assemblage V),IgA plasmablast,Q106586927,CL_0000984,,terminal
+hollow viscera (assemblage P),lung epithelial cell,Q107376005,CL_0000082,,terminal
+lymphocytes (assemblage V),IgG B cell,Q107452695,,,terminal
+lymphocytes (assemblage V),IgM B cell,Q107452696,,,terminal
+lymphocytes (assemblage V),IgE B cell,Q107452702,,,terminal
+non-skeletal (assemblage HH),myenteric interstitial cell of Cajal,Q107673041,,,terminal
+ECM secreting (assemblage U),fibrocartilage  chondrocyte,Q108611478,,,terminal
+endothelial cell (assemblage Q),splenic endothelial cell,Q108625459,CL_2000053,,terminal
+non-keratinizing (assemblage M),lens fiber cell,Q109630635,CL_0011004,,terminal
+covering,keratinizing (assemblage L),,Q126628794,,pre-terminal
+keratinizing (assemblage L),hair shaft cell,Q109922734,,,terminal
+endolymphatic cells (assemblage S),organ of Corti supporting cell,Q111396851,CL_0002490,,terminal
+endothelial cell (assemblage Q),fenestrated endothelial cell,Q111415513,,,terminal
+other (assemblage EE),spinal motor neuron,Q111416623,,,terminal
+sweat (assemblage D),mammary alveolar epithelial cell,Q111416697,CL_0002325,,terminal
+CNS derivative (assemblage R),olfactory bulb granule cell,Q111451713,CL_0000626,,terminal
+ducts (assemblage O),macula densa cell,Q112943515,,,terminal
+special (assemblage DD),M cone,Q113044710,CL_0003049,,terminal
+special (assemblage DD),L cone,Q113044712,CL_0003048,,terminal
+steroid (assemblage K),theca interna cell,Q113551675,,,terminal
+monocyte (assemblage W),mononuclear osteoclast,Q113664628,CL_0000778,,terminal
+peptide (assemblage I),vasopressin-secreting magnocellular cell,Q115541089,CL_4023109,,terminal
+monocyte (assemblage W),multinuclear osteoclast,Q115576659,CL_0000779,,terminal
+monocyte (assemblage W),chondroclast,Q115619550,,,terminal
+special (assemblage DD),g10 retinal ganglion cell,Q116185391,CL_0003013,,terminal
+special (assemblage DD),g11 retinal ganglion cell,Q116185392,CL_0003014,,terminal
+other (assemblage E),epithelial cell of endometrial gland,Q116185533,CL_0009084,,terminal
+hollow viscera (assemblage P),stratified squamous epithelial cell,Q116267975,CL_0000240,,terminal
+basophilic (assemblage G),luteinizing hormone secreting cell,Q116315165,CL_0000438,,terminal
+peptide (assemblage I),endorphin secreting cell,Q116342386,CL_0000507,,terminal
+ducts (assemblage O),brush border cell of the proximal tubule,Q116529236,CL_0002307,,terminal
+endolymphatic cells (assemblage S),strial intermediate cell,Q116530709,CL_0002486,,terminal
+endolymphatic cells (assemblage S),strial basal cell,Q116530772,CL_0002493,,terminal
+special (assemblage DD),G4 retinal ganglion cell,Q116532074,CL_0003005,,terminal
+special (assemblage DD),G3 retinal ganglion cell,Q116532072,CL_0003004,,terminal
+special (assemblage DD),G5 retinal ganglion cell,Q116532078,CL_0003008,,terminal
+special (assemblage DD),G8 retinal ganglion cell,Q116532082,CL_0003011,,terminal
+special (assemblage DD),G7 retinal ganglion cell,Q116532081,CL_0003010,,terminal
+special (assemblage DD),A2 amacrine cell,Q116620590,CL_0004219,,terminal
+special (assemblage DD),H1 horizontal cell,Q116620588,CL_0004217,,terminal
+special (assemblage DD),H2 horizontal cell,Q116620589,CL_0004218,,terminal
+ducts (assemblage O),glomerular cell,Q116643240,CL_1000746,,terminal
+ducts (assemblage O),kidney loop of Henle thick ascending limb epithelial cell,Q116643347,CL_1001106,,terminal
+neuron,PNS (assemblage CC),,Q126628862,,pre-terminal
+PNS (assemblage CC),sympathetic cholinergic neuron,Q116644312,CL_3000003,,terminal
+CNS derivative (assemblage R),choroid plexus cell,Q116644400,CL_4023073,,terminal
+peptide (assemblage I),oxytocin-secreting magnocellular cell,Q116645177,CL_4023108,,terminal
+other (assemblage EE),octopus cell of the mammalian cochlear nucleus,Q116645331,CL_4023158,,terminal
+other (assemblage EE),globular bushy cell,Q116645333,CL_4023164,,terminal
+protein secreting (assemblage C),fallopian tube secretory epithelial cell,Q116650058,CL_4030006,,terminal
+ducts (assemblage O),kidney loop of Henle short descending thin limb epithelial cell,Q116650145,CL_4030012,,terminal
+other (assemblage EE),CA1 pyramidal neuron,Q116695431,,,terminal
+muscle tissue,skeletal,,,,1
+skeletal,myocyte (assemblage FF),,Q126724167,,pre-terminal
+myocyte (assemblage FF),red skeletal muscle cell,Q116909014,,,terminal
+myocyte (assemblage FF),white skeletal muscle cell,Q116909020,,,terminal
+protein secreting (assemblage C),Von Ebner's gland cell,Q116909426,,,terminal
+protein secreting (assemblage C),salivary gland serous cell,Q116909446,,,terminal
+protein secreting (assemblage C),lacrimal gland cell,Q116909477,,,terminal
+sweat (assemblage D),ceruminous gland cell,Q116909483,,,terminal
+sweat (assemblage D),apocrine sweat gland cell,Q116909492,,,terminal
+sweat (assemblage D),cilliary gland cell,Q116913438,,,terminal
+other (assemblage EE),substantia nigra dopaminergic neuron,Q116924250,,,terminal
+mucous (assemblage B),urethral gland cell,Q122169205,,,terminal
+mucous (assemblage B),gastric secretory cell,Q122169254,,,terminal
+protein secreting (assemblage C),Bowman's gland dark cell,Q122169439,,,terminal
+protein secreting (assemblage C),Bowman's gland light cell,Q122169451,,,terminal
+amino acid (assemblage H),SIF cell type 1,Q122223056,,,terminal
+amino acid (assemblage H),SIF cell type 2,Q122223067,,,terminal
+peptide (assemblage I),carotid body glomus cell,Q122223656,,,terminal
+peptide (assemblage I),pituitary cromophobe cell,Q122223706,,,terminal
+peptide (assemblage I),type PYY enteroendocrine cell,Q122223853,,,terminal
+peptide (assemblage I),gastroenteropancreatic very large (VL) cell,Q122223880,,,terminal
+peptide (assemblage I),Hassall’s corpuscle epithelial cell,Q122223896,,,terminal
+peptide (assemblage I),lung endocrine cell,Q122223935,,,terminal
+peptide (assemblage I),interstitial cell of testis,Q122223964,,,terminal
+protein (assemblage J),glomerular peripolar cell,Q122224022,,,terminal
+steroid (assemblage K),zona fasciculata cell,Q122224159,,,terminal
+steroid (assemblage K),zona glomerulosa cell,Q122224167,,,terminal
+steroid (assemblage K),zona reticularis cell,Q122224174,,,terminal
+keratinizing (assemblage L),hair cuticular cell,Q122259068,,,terminal
+mucous (assemblage B),mucous membrane epithelial cell,Q126088741,,,terminal
+PNS (assemblage CC),mechanoreceptor neuron,Q126363942,CL_0000199,,terminal
+blood/immune,leukocyte (assemblage X),,Q126724151,,pre-terminal
+leukocyte (assemblage X),globule leukocyte,Q126629594,,,terminal
+endothelial cell (assemblage Q),spleen littoral cell,Q126629639,,,terminal
+other (assemblage E),seminal vesicle secretory cell,Q126717831,,,terminal
+keratinizing (assemblage L),hair cuticular root cell,Q126717834,,,terminal
+keratinizing (assemblage L),hair external cell,Q126717835,,,terminal
+amino acid (assemblage H),serotonin secreting enterochromaffin cell,Q126717832,,,terminal
+keratinizing (assemblage L),hair cortical cell,Q126717833,,,terminal
+keratinizing (assemblage L),Huxley's layer cell,Q126717843,,,terminal
+keratinizing (assemblage L),hair sheath cell,Q126717846,,,terminal
+non-keratinizing (assemblage M),anterior lens epithelial cell,Q126717847,,,terminal
+keratinizing (assemblage L),hair medullary cell,Q126717845,,,terminal
+ducts (assemblage O),female reproductive tract ciliated cell,Q126717851,,,terminal
+serosal cell (assemblage N),serosal surface cell,Q126717848,,,terminal
+ducts (assemblage O),gallbladder cholangiocyte,Q126717854,,,terminal
+ducts (assemblage O),male reproductive tract ciliated cell,Q126717852,,,terminal
+ducts (assemblage O),salivary intercalated duct cell,Q126717871,,,terminal
+ducts (assemblage O),salivary gland striated duct cell,Q126717874,,,terminal
+ducts (assemblage O),urinary system epithelial cell,Q126717875,,,terminal
+ducts (assemblage O),gland duct  nonstriated cell,Q126717872,,,terminal
+ducts (assemblage O),seminal vesicle and prostate gland duct cell,Q126717873,,,terminal
+ducts (assemblage O),epydidimal principal cell,Q126717930,,,terminal
+ducts (assemblage O),epidydimal duct cell,Q126717929,,,terminal
+endothelial cell (assemblage Q),continuous endothelial cell,Q126717939,,,terminal
+endothelial cell (assemblage Q),central nervous system endothelial cell,Q126717940,,,terminal
+endolymphatic cells (assemblage S),ampullary crest dark cell,Q126717955,,,terminal
+CNS derivative (assemblage R),pia-arachnoid squamous cell,Q126717952,,,terminal
+endolymphatic cells (assemblage S),columnar cell without microvilli,Q126717953,,,terminal
+endolymphatic cells (assemblage S),endolymphatic sac dark cell,Q126717957,,,terminal
+endolymphatic cells (assemblage S),vestibular apparatus membrane cell,Q126717962,,,terminal
+endolymphatic cells (assemblage S),endolymphatic sac squamous cell,Q126717963,,,terminal
+endolymphatic cells (assemblage S),auditory system light cell,Q126717961,,,terminal
+endolymphatic cells (assemblage S),stria vascularis marginal cell,Q126717967,,,terminal
+endolymphatic cells (assemblage S),perilymphatic space squamous cell,Q126717964,,,terminal
+endolymphatic cells (assemblage S),perilymphatic space stellate cell,Q126717965,,,terminal
+support,storage (assemblage T),,Q126628831,,pre-terminal
+storage (assemblage T),liver lipocyte,Q126717970,,,terminal
+ECM secreting (assemblage U),elastic cartilage chondrocyte,Q126717971,,,terminal
+endolymphatic cells (assemblage S),auditory supporting border cell,Q126717968,,,terminal
+endolymphatic cells (assemblage S),vestibular apparatus supporting cell,Q126717969,,,terminal
+monocyte (assemblage W),multinucleated macrophage,Q126717975,,,terminal
+ECM secreting (assemblage U),planum semilunatum cell,Q126717973,,,terminal
+oligodendrocytes (assemblage BB),interfascicular oligodendrocyte,Q126717998,,,terminal
+monocyte (assemblage W),serous cavity macrophage,Q126717997,,,terminal
+PNS (assemblage CC),enteric interneuron,Q126718000,,,terminal
+PNS (assemblage CC),inhibitory enteric motor neuron,Q126718007,,,terminal
+PNS (assemblage CC),enteric motor neuron projecting to gastroenteropancreatic endocrine cell,Q126718004,,,terminal
+PNS (assemblage CC),excitatory enteric motor neuron,Q126718005,,,terminal
+PNS (assemblage CC),enteric sensory neuron,Q126718010,,,terminal
+PNS (assemblage CC),stubby enteric neuron,Q126718011,,,terminal
+PNS (assemblage CC),secretomotor/vasomotor enteric neuron,Q126718008,,,terminal
+PNS (assemblage CC),parasympathetic  cholinergic neuron,Q126718014,,,terminal
+PNS (assemblage CC),sensory  A-beta IB neuron,Q126718018,,,terminal
+PNS (assemblage CC),parasympathetic  non-adrenergic/non-cholinergic (NANC) neuron,Q126718017,,,terminal
+PNS (assemblage CC),sensory  A-beta IIB neuron,Q126718020,,,terminal
+PNS (assemblage CC),sensory  A-delta type I neuron,Q126718026,,,terminal
+PNS (assemblage CC),sensory  A-delta type II neuron,Q126718027,,,terminal
+PNS (assemblage CC),sensory  A-delta cold fibre neuron,Q126718025,,,terminal
+PNS (assemblage CC),sensory  C-fibre peptidergic neuron,Q126718030,,,terminal
+PNS (assemblage CC),proprioceptor neuron,Q126718031,,,terminal
+PNS (assemblage CC),sensory  C-fibre non-peptidergic neuron,Q126718029,,,terminal
+PNS (assemblage CC),sympathetic  B-fibre neuron,Q126718034,,,terminal
+PNS (assemblage CC),sympathetic  C-fibre neuron,Q126718035,,,terminal
+PNS (assemblage CC),sympathetic adrenergic neuron,Q126718032,,,terminal
+special (assemblage DD),wooly diffuse amacrine cell,Q126718038,,,terminal
+special (assemblage DD),cholinergic stratum 2 amacrine cell,Q126718039,,,terminal
+special (assemblage DD),wavy amacrine cell,Q126718036,,,terminal
+special (assemblage DD),wiry amacrine cell,Q126718037,,,terminal
+special (assemblage DD),semilunar 1 amacrine cell,Q126718042,,,terminal
+special (assemblage DD),cholinergic stratum 4 amacrine cell,Q126718041,,,terminal
+special (assemblage DD),spiny amacrine cell,Q126718047,,,terminal
+special (assemblage DD),semilunar 2 amacrine cell,Q126718044,,,terminal
+special (assemblage DD),small-field diffuse amacrine cell,Q126718045,,,terminal
+special (assemblage DD),stellate-varicose amacrine cell,Q126718048,,,terminal
+special (assemblage DD),thorny 1 amacrine cell,Q126718049,,,terminal
+special (assemblage DD),A1 amacrine cell,Q126718054,,,terminal
+special (assemblage DD),A3 amacrine cell,Q126718055,,,terminal
+special (assemblage DD),thorny 2 amacrine cell,Q126718052,,,terminal
+special (assemblage DD),tristratified amacrine cell,Q126718053,,,terminal
+special (assemblage DD),A8 amacrine cell,Q126718058,,,terminal
+special (assemblage DD),A12 amacrine cell,Q126718059,,,terminal
+special (assemblage DD),A4 amacrine cell,Q126718056,,,terminal
+special (assemblage DD),A5 amacrine cell,Q126718057,,,terminal
+special (assemblage DD),A14 amacrine cell,Q126718062,,,terminal
+special (assemblage DD),A13 amacrine cell,Q126718061,,,terminal
+special (assemblage DD),A18 amacrine cell,Q126718066,,,terminal
+special (assemblage DD),A17 spidery-diffuse amacrine cell,Q126718064,,,terminal
+special (assemblage DD),type a blue cone bipolar neuron,Q126718071,,,terminal
+special (assemblage DD),bistratified giant retinal bipolar neuron,Q126718069,,,terminal
+special (assemblage DD),type b diffuse cone bipolar cell,Q126718074,,,terminal
+special (assemblage DD),G12 retinal ganglion cell,Q126718075,,,terminal
+special (assemblage DD),type b blue cone bipolar neuron,Q126718072,,,terminal
+special (assemblage DD),type a diffuse cone bipolar cell,Q126718073,,,terminal
+special (assemblage DD),G17 retinal ganglion cell,Q126718078,,,terminal
+special (assemblage DD),G19 retinal ganglion cell,Q126718079,,,terminal
+special (assemblage DD),G16 retinal ganglion cell,Q126718076,,,terminal
+special (assemblage DD),G21 retinal ganglion cell,Q126718082,,,terminal
+special (assemblage DD),G22 retinal ganglion cell,Q126718083,,,terminal
+special (assemblage DD),G20 retinal ganglion cell,Q126718080,,,terminal
+special (assemblage DD),small parasol ganglion cell,Q126718086,,,terminal
+special (assemblage DD),G23 retinal ganglion cell,Q126718084,,,terminal
+special (assemblage DD),H3 horizontal cell,Q126718091,,,terminal
+special (assemblage DD),retinal interplexiform neuron,Q126718094,,,terminal
+other (assemblage EE),back-projection interneuron,Q126718099,,,terminal
+special (assemblage DD),invaginating midget bipolar  cell,Q126718096,,,terminal
+other (assemblage EE),axo-axonic interneuron,Q126718097,,,terminal
+other (assemblage EE),type III basket cell,Q126718103,,,terminal
+other (assemblage EE),type I basket cell,Q126718100,,,terminal
+other (assemblage EE),type II basket cell,Q126718101,,,terminal
+other (assemblage EE),CA1 oriens-alveus interneuron,Q126718107,,,terminal
+other (assemblage EE),bilaminar interneuron,Q126718104,,,terminal
+other (assemblage EE),bistratified interneuron,Q126718105,,,terminal
+other (assemblage EE),cochlear nucleus elongated neuron,Q126718114,,,terminal
+other (assemblage EE),cochlear nucleus clavate neuron,Q126718113,,,terminal
+other (assemblage EE),type II interneuron-selective interneuron,Q126718118,,,terminal
+other (assemblage EE),type III interneuron-selective interneuron,Q126718119,,,terminal
+other (assemblage EE),hippocampal-septal interneuron,Q126718116,,,terminal
+other (assemblage EE),type I interneuron-selective interneuron,Q126718117,,,terminal
+other (assemblage EE),lacunosaum-moleculare radiatum perforant path associated cell,Q126718123,,,terminal
+other (assemblage EE),lacunosaum-moleculare perforant path associated cell,Q126718120,,,terminal
+other (assemblage EE),neostriatal cholinergic interneuron,Q126718127,,,terminal
+other (assemblage EE),large spherical bushy cell,Q126718124,,,terminal
+other (assemblage EE),small spherical bushy cell,Q126718130,,,terminal
+other (assemblage EE),Schaffer collateral associated  interneuron,Q126718129,,,terminal
+other (assemblage EE),spinal Ia interneuron,Q126718160,,,terminal
+other (assemblage EE),oriens lacunosum-moleculare neuron,Q126718161,,,terminal
+other (assemblage EE),striatal microneuron,Q126718166,,,terminal
+other (assemblage EE),striatal spidery neuron,Q126718167,,,terminal
+other (assemblage EE),striatal leptodendritic neuron,Q126718164,,,terminal
+other (assemblage EE),type II stellate neuron,Q126718187,,,terminal
+other (assemblage EE),thalamic relay neuron,Q126718184,,,terminal
+other (assemblage EE),thalamic reticular neuron,Q126718185,,,terminal
+non-skeletal (assemblage HH),deep muscularis plexus interstitial cell of cajal,Q126718190,,,terminal
+myocyte (assemblage FF),intermediate skeletal muscle cell,Q126718188,,,terminal
+non-skeletal (assemblage HH),submucosal interstitial cell of Cajal,Q126718189,,,terminal
+non-skeletal (assemblage HH),intramuscular interstitial cell of Cajal,Q126718192,,,terminal
+ducts (assemblage O),efferent ductule non-ciliated cell,Q126722231,,,terminal
+PNS (assemblage CC),warm fibre sensory neuron,Q126723825,,,terminal
+special (assemblage DD),flat midget bipolar cell,Q126723841,,,terminal
+special (assemblage DD),giant diffuse retinal bipolar cell,Q126723867,,,terminal
+other (assemblage EE),olfactory cortex pyramidal neuron,Q126724014,,,terminal
+other (assemblage EE),olfactory cortex deep interneuron,Q126724017,,,terminal
+other (assemblage EE),olfactory cortex superficial interneuron,Q126724022,,,terminal
+other (assemblage EE),antenniform interneuron,Q126724060,,,terminal
+epithelium,germ (assemblage A),,Q126088661,,pre-terminal
+germ (assemblage A),spermatozoon,Q74560,CL_0011013,https://en.wikipedia.org/wiki/Spermatozoon,terminal
+leukocyte (assemblage X),eosinophil,Q107238,CL_0000771,https://en.wikipedia.org/wiki/Eosinophil,terminal
+blood/immune,other (assemblage Y),,Q126628845,,pre-terminal
+other (assemblage Y),red blood cell,Q37187,CL_0000232,https://en.wikipedia.org/wiki/Red_blood_cell,terminal
+leukocyte (assemblage X),basophil,Q107988,CL_0000767,https://en.wikipedia.org/wiki/Basophil,terminal
+ducts (assemblage O),podocyte,Q138912,CL_0000653,https://en.wikipedia.org/wiki/Podocyte,terminal
+leukocyte (assemblage X),neutrophil,Q188417,CL_0000775,https://en.wikipedia.org/wiki/Neutrophil,terminal
+monocyte (assemblage W),monocyte,Q107244,CL_0000576,https://en.wikipedia.org/wiki/Monocyte,terminal
+CNS derivative (assemblage R),tanycyte,Q1419042,CL_0002085,https://en.wikipedia.org/wiki/Tanycyte,terminal
+non-skeletal (assemblage HH),myofibroblast,Q1467330,CL_0000186,https://en.wikipedia.org/wiki/Myofibroblast,terminal
+keratinizing (assemblage L),keratinocyte,Q1473931,CL_0000312,https://en.wikipedia.org/wiki/Keratinocyte,terminal
+non-skeletal (assemblage HH),myoepithelial cell,Q1476681,CL_0000185,https://en.wikipedia.org/wiki/Myoepithelial_cell,terminal
+lymphocytes (assemblage V),regulatory T cell,Q1550619,CL_0000920,https://en.wikipedia.org/wiki/Regulatory_T_cell,terminal
+CNS derivative (assemblage R),Merkel cell,Q1570264,CL_0000242,https://en.wikipedia.org/wiki/Merkel_cell,terminal
+ECM secreting (assemblage U),cementoblast,Q189341,CL_0000061,https://en.wikipedia.org/wiki/Cementoblast,terminal
+leukocyte (assemblage X),mast cell,Q191989,CL_0000097,https://en.wikipedia.org/wiki/Mast_cell,terminal
+peptide (assemblage I),Sertoli cell,Q195614,CL_0000216,https://en.wikipedia.org/wiki/Sertoli_cell,terminal
+leukocyte (assemblage X),granulocyte,Q223143,CL_0000094,https://en.wikipedia.org/wiki/Granulocyte,terminal
+non-keratinizing (assemblage M),melanocyte,Q247101,CL_0000148,https://en.wikipedia.org/wiki/Melanocyte,terminal
+ECM secreting (assemblage U),hyaline cartilage chondrocyte,Q126717972,,https://en.wikipedia.org/wiki/Hyaline_cartilage_chondrocyte,terminal
+other (assemblage EE),pyramidal cell,Q2116409,CL_0000598,https://en.wikipedia.org/wiki/Pyramidal_cell,terminal
+other (assemblage EE),giant cell,Q2152526,CL_0000647,https://en.wikipedia.org/wiki/Giant_cell,terminal
+PNS (assemblage Z),pituicyte,Q2231040,CL_0000645,https://en.wikipedia.org/wiki/Pituicyte,terminal
+other (assemblage EE),Cajal–Retzius cell,Q2299284,CL_0000695,https://en.wikipedia.org/wiki/Cajal%E2%80%93Retzius_cell,terminal
+protein secreting (assemblage C),gastric chief cell,Q2595765,CL_0000155,https://en.wikipedia.org/wiki/Gastric_chief_cell,terminal
+protein (assemblage J),juxtaglomerular cell,Q2596226,CL_0000648,https://en.wikipedia.org/wiki/Juxtaglomerular_cell,terminal
+peptide (assemblage I),delta cell,Q2621407,CL_0000502,https://en.wikipedia.org/wiki/Delta_cell,terminal
+other (assemblage EE),Purkinje cell,Q1570272,CL_0000121,https://en.wikipedia.org/wiki/Purkinje_cell,terminal
+monocyte (assemblage W),microglia,Q1622829,CL_0000129,https://en.wikipedia.org/wiki/Microglia,terminal
+monocyte (assemblage W),Langerhans cell,Q1623344,CL_0000453,https://en.wikipedia.org/wiki/Langerhans_cell,terminal
+other (assemblage E),parietal cell,Q1640093,CL_0000162,https://en.wikipedia.org/wiki/Parietal_cell,terminal
+other (assemblage EE),Renshaw cell,Q1756451,,https://en.wikipedia.org/wiki/Renshaw_cell,terminal
+protein (assemblage J),beta cell,Q1767180,CL_0000169,https://en.wikipedia.org/wiki/Beta_cell,terminal
+other (assemblage EE),granule cell,Q1777753,CL_0000120,https://en.wikipedia.org/wiki/Granule_cell,terminal
+CNS derivative (assemblage R),olfactory bulb mitral cell,Q1939737,CL_1001502,https://en.wikipedia.org/wiki/Mitral_cell,terminal
+peptide (assemblage I),PP cell,Q1968774,CL_0000696,https://en.wikipedia.org/wiki/Pancreatic_polypeptide_cells,terminal
+protein secreting (assemblage C),Paneth cell,Q2004084,CL_0000510,https://en.wikipedia.org/wiki/Paneth_cell,terminal
+PNS (assemblage Z),myosatellite cell,Q2633328,CL_0000594,https://en.wikipedia.org/wiki/Myosatellite_cell,terminal
+myocyte (assemblage FF),myosatellite cell,Q2633328,CL_0000594,https://en.wikipedia.org/wiki/Myosatellite_cell,terminal
+other (assemblage EE),Chandelier cell,Q2687512,CL_4023083,https://en.wikipedia.org/wiki/Chandelier_cell,terminal
+amino acid (assemblage H),thyroid follicular cell,Q2984407,CL_0002258,https://en.wikipedia.org/wiki/Thyroid_follicular_cell,terminal
+peptide (assemblage I),G cell,Q2987004,CL_0000508,https://en.wikipedia.org/wiki/G_cell,terminal
+peptide (assemblage I),alpha cell,Q2995031,CL_0000171,https://en.wikipedia.org/wiki/Alpha_cell,terminal
+pituitary,acidophilic (assemblage F),,Q126628770,,pre-terminal
+acidophilic (assemblage F),somatotropic cell,Q3015605,CL_0002312,https://en.wikipedia.org/wiki/Somatotropic_cell,terminal
+acidophilic (assemblage F),prolactin cell,Q3016161,CL_0002311,https://en.wikipedia.org/wiki/Prolactin_cell,terminal
+basophilic (assemblage G),gonadotropic cell,Q3099316,CL_0000437,https://en.wikipedia.org/wiki/Gonadotropic_cell,terminal
+amino acid (assemblage H),pinealocyte,Q3241787,CL_0000652,https://en.wikipedia.org/wiki/Pinealocyte,terminal
+germ (assemblage A),oocyte,Q3246226,CL_0000023,https://en.wikipedia.org/wiki/Oocyte,terminal
+peptide (assemblage I),parathyroid chief cell,Q3272785,CL_0000446,https://en.wikipedia.org/wiki/Parathyroid_chief_cell,terminal
+protein secreting (assemblage C),type II pneumocyte,Q3272858,CL_0002063,https://en.wikipedia.org/wiki/Type_II_pneumocyte,terminal
+hollow viscera (assemblage P),type I pneumocyte,Q3296912,CL_0002062,https://en.wikipedia.org/wiki/Type_I_pneumocyte,terminal
+peptide (assemblage I),enterochromaffin-like cell,Q3329719,CL_0000504,https://en.wikipedia.org/wiki/Enterochromaffin-like_cell,terminal
+ECM secreting (assemblage U),mesangial cell,Q3331086,CL_0000650,https://en.wikipedia.org/wiki/Mesangial_cell,terminal
+endolymphatic cells (assemblage S),Boettcher cell,Q3331447,CL_0002084,https://en.wikipedia.org/wiki/Boettcher_cell,terminal
+PNS (assemblage CC),gamma motor neuron,Q3866857,CL_0008037,https://en.wikipedia.org/wiki/Gamma_motor_neuron,terminal
+PNS (assemblage CC),alpha motor neuron,Q3866929,CL_0008038,https://en.wikipedia.org/wiki/Alpha_motor_neuron,terminal
+peptide (assemblage I),S cell,Q4048663,CL_0002281,https://en.wikipedia.org/wiki/S_cell,terminal
+other (assemblage EE),Martinotti cell,Q4316451,CL_4023076,https://en.wikipedia.org/wiki/Martinotti_cell,terminal
+ducts (assemblage O),centroacinar cell,Q5062943,,https://en.wikipedia.org/wiki/Centroacinar_cell,terminal
+ducts (assemblage O),cholangiocyte,Q5104283,CL_1000488,https://en.wikipedia.org/wiki/Cholangiocyte,terminal
+endolymphatic cells (assemblage S),Claudius cell,Q5129485,CL_0000634,https://en.wikipedia.org/wiki/Claudius_cell,terminal
+basophilic (assemblage G),corticotropic cell,Q5173293,CL_0002309,https://en.wikipedia.org/wiki/Corticotropic_cell,terminal
+endolymphatic cells (assemblage S),Deiter cell,Q5252593,,https://en.wikipedia.org/wiki/Deiters%27_cells,terminal
+peptide (assemblage I),thymic epithelial cell,Q5383699,CL_0002293,https://en.wikipedia.org/wiki/Thymic_epithelial_cell,terminal
+other (assemblage EE),Golgi cell,Q5580667,,https://en.wikipedia.org/wiki/Golgi_cell,terminal
+ECM secreting (assemblage U),hyalocyte,Q5952570,CL_0000142,https://en.wikipedia.org/wiki/Hyalocyte,terminal
+basophilic (assemblage G),melanotroph,Q6811556,,https://en.wikipedia.org/wiki/Melanotroph,terminal
+skeletal,spindle (assemblage GG),,Q126724169,,pre-terminal
+spindle (assemblage GG),nuclear bag fiber,Q7068034,CL_4023004,https://en.wikipedia.org/wiki/Nuclear_bag_fiber,terminal
+spindle (assemblage GG),nuclear chain fiber,Q7068038,CL_4023003,https://en.wikipedia.org/wiki/Nuclear_chain_fiber,terminal
+special (assemblage DD),parasol cell,Q7135979,CL_4023189,https://en.wikipedia.org/wiki/Parasol_cell,terminal
+ECM secreting (assemblage U),tendon cell,Q7699651,CL_0000388,https://en.wikipedia.org/wiki/Tendon_cell,terminal
+lymphocytes (assemblage V),thymocyte,Q7799635,CL_0000893,https://en.wikipedia.org/wiki/Thymocyte,terminal
+monocyte (assemblage W),plasmacytoid dendritic cell,Q12045567,CL_0000784,https://en.wikipedia.org/wiki/Plasmacytoid_dendritic_cell,terminal
+CNS derivative (assemblage R),periglomerular neuron,Q16910948,CL_1001435,https://en.wikipedia.org/wiki/Periglomerular_cell,terminal
+CNS derivative (assemblage R),tufted cell,Q16969285,,https://en.wikipedia.org/wiki/Tufted_cell,terminal
+special (assemblage DD),midget cell,Q17042070,CL_4023188,https://en.wikipedia.org/wiki/Midget_cell,terminal
+other (assemblage EE),unipolar brush cell,Q17144724,CL_4023161,https://en.wikipedia.org/wiki/Unipolar_brush_cell,terminal
+lymphocytes (assemblage V),plasma cell,Q250694,CL_0000786,https://en.wikipedia.org/wiki/Plasma_cell,terminal
+lymphocytes (assemblage V),natural killer cell,Q332181,CL_0000623,https://en.wikipedia.org/wiki/Natural_killer_cell,terminal
+lymphocytes (assemblage V),cytotoxic T cell,Q376266,CL_0000910,https://en.wikipedia.org/wiki/Cytotoxic_T_cell,terminal
+monocyte (assemblage W),alveolar macrophage,Q448687,CL_0000583,https://en.wikipedia.org/wiki/Alveolar_macrophage,terminal
+CNS derivative (assemblage R),olfactory receptor neuron,Q460276,CL_0000207,https://en.wikipedia.org/wiki/Olfactory_receptor_neuron,terminal
+ECM secreting (assemblage U),fibroblast,Q463418,CL_0000057,https://en.wikipedia.org/wiki/Fibroblast,terminal
+PNS (assemblage Z),Schwann cell,Q465621,CL_0002573,https://en.wikipedia.org/wiki/Schwann_cell,terminal
+ECM secreting (assemblage U),pericyte,Q500446,CL_0000669,https://en.wikipedia.org/wiki/Pericyte,terminal
+special (assemblage DD),rod cell,Q505544,CL_0000604,https://en.wikipedia.org/wiki/Rod_cell,terminal
+monocyte (assemblage W),dendritic cell,Q506253,CL_0000451,https://en.wikipedia.org/wiki/Dendritic_cell,terminal
+monocyte (assemblage W),Kupffer cell,Q513486,CL_0000091,https://en.wikipedia.org/wiki/Kupffer_cell,terminal
+lymphocytes (assemblage V),T helper cell,Q632518,CL_0000912,https://en.wikipedia.org/wiki/T_helper_cell,terminal
+steroid (assemblage K),Leydig cell,Q636846,CL_0000178,https://en.wikipedia.org/wiki/Leydig_cell,terminal
+amino acid (assemblage H),argentaffin cell,Q644967,,https://en.wikipedia.org/wiki/Argentaffin,terminal
+hollow viscera (assemblage P),club cell,Q645712,CL_0000158,https://en.wikipedia.org/wiki/Club_cell,terminal
+monocyte (assemblage W),histiocyte,Q654612,,https://en.wikipedia.org/wiki/Histiocyte,terminal
+astrocytes (assemblage AA),Müller glia,Q735343,CL_0000636,https://en.wikipedia.org/wiki/M%C3%BCller_glia,terminal
+mucous (assemblage B),goblet cell,Q813622,CL_0000160,https://en.wikipedia.org/wiki/Goblet_cell,terminal
+other (assemblage Y),megakaryocyte,Q821701,CL_0000556,https://en.wikipedia.org/wiki/Megakaryocyte,terminal
+other (assemblage E),hepatocyte,Q827450,CL_0000182,https://en.wikipedia.org/wiki/Hepatocyte,terminal
+other (assemblage EE),Betz cell,Q850597,CL_0008049,https://en.wikipedia.org/wiki/Betz_cell,terminal
+ECM secreting (assemblage U),odontoblast,Q853338,CL_0000060,https://en.wikipedia.org/wiki/Odontoblast,terminal
+ECM secreting (assemblage U),osteocyte,Q913236,CL_0000137,https://en.wikipedia.org/wiki/Osteocyte,terminal
+non-skeletal (assemblage HH),cardiomyocyte,Q1047227,CL_0000746,https://en.wikipedia.org/wiki/Cardiac_muscle_cell,terminal
+CNS derivative (assemblage R),ependyma,Q1134467,,https://en.wikipedia.org/wiki/Ependyma,terminal
+peptide (assemblage I),parafollicular cell,Q1237997,CL_0000570,https://en.wikipedia.org/wiki/Parafollicular_cell,terminal
+hollow viscera (assemblage P),enterocyte,Q1340349,CL_0000584,https://en.wikipedia.org/wiki/Enterocyte,terminal
+other (assemblage EE),medium spiny neuron,Q17152690,CL_1001474,https://en.wikipedia.org/wiki/Medium_spiny_neuron,terminal
+monocyte (assemblage W),anterior pituitary folliculostellate cell,Q48997534,CL_0000642,https://en.wikipedia.org/wiki/Folliculostellate_cell,terminal
+special (assemblage DD),AII amacrine cell,Q55602946,CL_0004219,https://en.wikipedia.org/wiki/AII_amacrine_cells,terminal
+hollow viscera (assemblage P),type I taste bud cell,Q66558641,CL_0002289,https://en.wikipedia.org/wiki/Type_I_taste_bud_cell,terminal
+storage (assemblage T),white adipocyte,Q66590134,CL_0000448,https://en.wikipedia.org/wiki/White_adipocyte,terminal
+storage (assemblage T),brown adipocyte,Q66590135,CL_0000449,https://en.wikipedia.org/wiki/Brown_adipocyte,terminal
+other (assemblage EE),neurogliaform cell of cerebral cortex,Q66590936,,https://en.wikipedia.org/wiki/Neurogliaform_cell,terminal
+hollow viscera (assemblage P),airway basal cell,Q85740263,CL_0002633,https://en.wikipedia.org/wiki/Airway_basal_cell,terminal
+other (assemblage EE),dentate gyrus granule cell,Q109746226,CL_0001033,https://en.wikipedia.org/wiki/Dentate_gyrus_granule_cell,terminal
+special (assemblage DD),S cone,Q113044709,CL_0003050,https://en.wikipedia.org/wiki/S_cone,terminal
+mucous (assemblage B),Bartholin's gland cell,Q122169150,,https://en.wikipedia.org/wiki/Bartholin%27s_gland_cell,terminal
+mucous (assemblage B),bulbourethral gland cell,Q122169174,,https://en.wikipedia.org/wiki/Bulbourethral_gland_cell,terminal
+keratinizing (assemblage L),Henle's layer cell,Q126717842,,https://en.wikipedia.org/wiki/Henle%27s_layer_cell,terminal
